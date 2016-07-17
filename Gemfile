@@ -35,13 +35,13 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rabl'
 gem 'oj'
 gem 'devise'
-gem 'turbolinks'
 gem 'will_paginate', '~> 3.0.6'
 gem 'searchkick'
 gem 'sidekiq'
 gem 'sinatra'
 gem 'kiqit'
 gem 'faker'
+gem 'bower-rails'
 	
 
 gem 'sass', '3.2.19' 
