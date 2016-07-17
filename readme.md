@@ -1,0 +1,1 @@
+### This is an Application made with Rails and Angular.. hence Rangular
