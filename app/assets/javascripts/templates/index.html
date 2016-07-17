@@ -6,6 +6,9 @@
       <form class="form-inline">
         <div class="form-group">
           <input class="form-control" type="text" placeholder="Enter your name" autofocus ng-model="name">
+          <ol>
+            <li ng-repeat='line in lines | filter : name'>{{line.text}}</li>
+          </ol>
         </div>
       </form>
     </div>
