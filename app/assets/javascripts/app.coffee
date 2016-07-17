@@ -2,6 +2,7 @@ rangular = angular.module('rangular',[
   'templates',
   'ngRoute',
   'controllers',
+  'LocalStorageModule'
 ])
 
 rangular.config([ '$routeProvider',
