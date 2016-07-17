@@ -1,0 +1,2 @@
+rangular = angular.module('rangular',[
+])
