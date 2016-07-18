@@ -15,6 +15,3 @@ rangular.config([ '$routeProvider',
 ])
 
 controllers = angular.module('controllers',[])
-controllers.controller("homeCtrl", [ '$scope',
-  ($scope)->
-])

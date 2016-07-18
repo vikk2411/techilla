@@ -7,7 +7,7 @@
         <div class="form-group">
           <input class="form-control" type="text" placeholder="Enter your name" autofocus ng-model="name">
           <ol>
-            <li ng-repeat='line in lines | filter : name'>{{line.text}}</li>
+            <li ng-repeat='user in users | filter : name'>{{user.name}}</li>
           </ol>
         </div>
       </form>
