@@ -3,6 +3,15 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  validates :email, :username, presence: true       
+  validate :unique_email, on: :create  
+  validate :unique_username
+
+  def gravatar_url
+    gravatar_id = Digest::MD5::hexdigest(user.email.downcase)
+    gravatar_url = "https://secure.gravatar.com/avatar/#{gravatar_id}"
+  end    
+
 end
 
 # == Schema Information
