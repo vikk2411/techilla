@@ -43,6 +43,7 @@ gem 'kiqit'
 gem 'faker'
 gem 'bower-rails'
 gem 'angular-rails-templates' #for defining the templates properly in production mode	
+gem 'omniauth-twitter'
 
 gem 'sass', '3.2.19' 
 group :test, :development do

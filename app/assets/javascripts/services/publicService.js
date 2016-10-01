@@ -8,6 +8,15 @@
             return "Tesangular";
         }
 
+        this.current_user = function(){
+        	var deferred = $q.defer();
+            var URL = "/users/which_user.json"
+            $http.get(URL).then(function(data){
+                deferred.resolve(data);
+            });
+            return deferred.promise;
+        }
+
         this.fake_data = function(){
         	var fake = [
 												  {
