@@ -1,4 +1,6 @@
-  <div class="panel panel-success">
+    <div ng-include = "'partials/header.html'" ></div>
+  
+    <div class="panel panel-success"  style="margin:50px">
     <div class="panel-heading">
       <h1 ng-if="name">Hello, {{name}}</h1>
     </div>
@@ -14,11 +16,3 @@
     </div>
   </div>
 
-  <div ng-if="!user">
-    <a href="/auth/twitter"> Login Using Twitter</a>
-  
-  </div>
-  <div ng-if="user">
-    <a href="#" ng-click="logout()"> logout</a>
-  
-  </div>
