@@ -1,17 +1,22 @@
 (function(){
-  angular.module('rangular').controller('homeCtrl', ['$scope', 'publicService',
-        function($scope, publicService) {
+  angular.module('rangular').controller('homeCtrl', ['$scope', 'publicService', '$location',
+        function($scope, publicService, $location) {
           $scope.user = {}
 
-          $scope.user.name = "Joshua";
-          $scope.users = publicService.fake_data()
-          $scope.test = publicService.test_data();
-
-          console.log($scope.test)
-
+          $scope.name = "Joshua";
+          
           publicService.current_user().then(function(response){
-          	$scope.user = response.data.user;
-          	$scope.name = $scope.user.name;
+             if(response.data.success){
+              $scope.user = response.data.user;
+              $scope.name = $scope.user.name;
+             }
           })
+
+          $scope.logout = function(){
+          	publicService.logout_user().then(function(response){
+	          	console.log("logged out");
+              $location.url("/");
+	          })
+          }
   }])
 })();

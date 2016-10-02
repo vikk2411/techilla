@@ -14,6 +14,11 @@
     </div>
   </div>
 
-  <div>
+  <div ng-if="!user">
     <a href="/auth/twitter"> Login Using Twitter</a>
+  
+  </div>
+  <div ng-if="user">
+    <a href="#" ng-click="logout()"> logout</a>
+  
   </div>
